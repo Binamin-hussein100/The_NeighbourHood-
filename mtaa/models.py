@@ -54,7 +54,7 @@ class Business(models.Model):
     
 class User(AbstractUser):
     name = models.CharField(max_length=30)
-    neighborhood = models.ForeignKey(NeigbourHood,blank=True, null=True,on_delete=models.CASCADE,default=1)
+    neighborhood = models.ForeignKey(NeigbourHood,blank=True, null=True,on_delete=models.CASCADE)
     email = models.EmailField()
     
     def __str__(self):
