@@ -19,7 +19,6 @@ def index(request):
 def register(request):
     if request.method == 'POST':
             username = request.POST['username']
-            neighbourhood = request.POST['neighbourhood']
             email = request.POST['email']
             password1=request.POST['password']
             password2 = request.POST['password2']
