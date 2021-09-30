@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="sea-1"  class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="sea-2" class="container">
+                    <div class="col-md-12">
+                        <h4>Search results.</h4>
+                        <div id="sea-4">
+                            {% for s in searched %}
+                                <!-- <h3>{{s.hood_name}}</h3> -->
+                                <h1><i class="fas fa-house-user"></i></h1>
+                                <a href="{% url 'news'  %}"><h2>{{s.hood_name | upper}}</h2></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

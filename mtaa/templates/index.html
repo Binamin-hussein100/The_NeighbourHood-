@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="hp-1" class="container-fluid">
+        <div class="row">
+            <div id="hp-3" class="container">
+                <div class="row">
+                    {% for i in mtaani %}
+                    <div class="text-center" id="hp-2" >
+                        <h1><i class="fas fa-house-user"></i></h1>
+                        <a href="{% url 'news'  %}"><h2>{{i.hood_name | upper}}</h2></a>
+                    </div>
+                    <hr>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

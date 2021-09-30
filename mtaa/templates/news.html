@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="new-1" class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="new-2"  class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <H4>Add your post here</H4>
+                            <!-- Large modal -->
+                            <div class="dropdown">
+                                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Post__<i class="fas fa-plus"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-3">
+                                                <form method="post" enctype="multipart/form-data">
+                                                    {%csrf_token%}
+                                                    <div class="row justify-content-center">
+                                                        {{new}}
+                                                        <hr>
+                                                        <hr>
+                                                        <hr>
+                                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+    
+                            <div>
+                                {% for all in all_post %}
+                                    <div id="new-3">
+                                        <h5>{{all.title}}</h5>
+                                        <p>{{all.body}}</p>
+                                        <h6>Story by:{{all.author}}</h6>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <!-- second -->
+                        <div class="col-md-5">
+                            <H4>Add a BUSINESS here.</H4>
+                            <!-- Large modal -->
+                            <div class="dropdown">
+                                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Post__<i class="fas fa-plus"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-3">
+                                                <form method="post" enctype="multipart/form-data">
+                                                    {%csrf_token%}
+                                                    <div class="row justify-content-center">
+                                                        {{biz}}
+                                                        <hr>
+                                                        <hr>
+                                                        <hr>
+                                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                             <!-- oop l -->
+                              <div>
+                                  {% for m in all_biz %}
+                                    <div id="new-4">
+                                        <h5>{{m.business_name}}</h5>
+                                        <h6>{{m.business_email}}</h6>
+                                        <small>{{m.neighbourhood}}</small>
+                                    </div>
+                                  {% endfor %}
+                              </div>
+    
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div class="row justify-content-center">
+        {{new}}
+        <hr>
+        <hr>
+        <hr>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+    </div>
+</form>

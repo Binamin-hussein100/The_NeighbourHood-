@@ -1,21 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    <div class="form">
-        <label for="username">USERNAME:</label>
-        <input type="text" name="username" class="form-control" required>
+    <div id="log-1" class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="log-2" class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="text-center">HOORAY</h1>
+                            <p>Congratulation for being a part of our group. <br> Sometimes all you need is an awesome guest to make you feel complete in the family. I am really glad to see you. Welcome to my sweet home!</p>
+                        </div>
+                        <div class="col-md-6">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form">
+                                    <label for="username"><h5><strong>USERNAME:</strong></h5></label>
+                                    <input type="text" name="username" class="form-control" required>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="password"><h5><strong>PASSWORD:</strong></h5></label>
+                                    <input type="password" class="form-control" name="password" required>
+                                </div>
+                            
+                                <input  type="submit" value="Log in" class="btn btn-outline-light btn-block mt-2">
+                            </form>
+                            <div>
+                                You have no account yet? <a href="{% url 'register' %}">sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for="password">PASSWORD:</label>
-        <input type="password" class="form-control" name="password" required>
-    </div>
-
-    <input  type="submit" value="Log in" class="btn btn-outline-light btn-block mt-2">
-</form>
-<div>
-    You have no account yet? <a href="{% url 'register' %}">sign up</a>
-</div>
 {% endblock %}
+
