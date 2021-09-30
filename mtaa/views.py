@@ -15,7 +15,7 @@ def index(request):
     mtaani = NeigbourHood.objects.all()
     return render(request,'index.html',{"mtaani":mtaani})
 
-@login_required()
+
 def register(request):
     if request.method == 'POST':
             username = request.POST['username']
