@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'mtaani.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES ={}
-PRODUCTION= True
+PRODUCTION= os.environ.get('PRODUCTION')
 if PRODUCTION =='True':
     DATABASES['default']=dj_url.config()
 else:
