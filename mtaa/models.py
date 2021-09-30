@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from cloudinary.models import CloudinaryField
+from django.db.models.signals import post_save
+
 
 # Create your models here.
 
@@ -60,8 +62,23 @@ class User(AbstractUser):
 
 class Profile(models.Model):
     name = models.CharField(max_length=30)
-    bio = models.TextField()
+    bio = models.TextField(default='Words that defend you when you are not there to defend yourself')
     neigbourHood =  models.CharField(max_length=30)
     profile_pic = CloudinaryField('image')
         
+    def __str__(self):
+        return self.name
+    
+def create_profile(sender,**kwargs):
+    if kwargs['created']:
+        user_profile = Profile.objects.create(name=kwargs['instance'])
+post_save.connect(create_profile, sender=User)
+
+class Post(models.Model):
+    title = models.CharField(max_length=30)
+    body = models.TextField()
+    author = models.CharField(max_length=30)
+    
+    def __str__(self):
+        return self.title
     
