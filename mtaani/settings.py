@@ -89,7 +89,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE':'django.db.backends.postgresql',
-            'NAME':'neigbourhood',
+            'NAME':'hood',
             'USER':'moringa',
             'PASSWORD': 'binamin',
         }
