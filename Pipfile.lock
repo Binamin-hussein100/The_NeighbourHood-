@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b47dac12b4c3f068e664f5882a9002ab951ddc087b94b60629c99dc22922ddf8"
+            "sha256": "b8fcc3a67e85117afec1f7a735ef5de98be9c7bd626ee583ed7ad1ab4ffc6e0e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,6 +44,21 @@
             "index": "pypi",
             "version": "==1.26.0"
         },
+        "dj": {
+            "hashes": [
+                "sha256:515398094e8a1dfd309cbebfa760cf8608e58cb4dff10579fdad85b10b729385"
+            ],
+            "index": "pypi",
+            "version": "==0.1"
+        },
+        "dj-database-url": {
+            "hashes": [
+                "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163",
+                "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"
+            ],
+            "index": "pypi",
+            "version": "==0.5.0"
+        },
         "django": {
             "hashes": [
                 "sha256:95b318319d6997bac3595517101ad9cc83fe5672ac498ba48d1a410f47afecd2",
@@ -59,6 +74,14 @@
             ],
             "index": "pypi",
             "version": "==3.0.1"
+        },
+        "gunicorn": {
+            "hashes": [
+                "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e",
+                "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"
+            ],
+            "index": "pypi",
+            "version": "==20.1.0"
         },
         "psycopg2": {
             "hashes": [
@@ -109,6 +132,14 @@
                 "sha256:c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"
             ],
             "version": "==1.26.7"
+        },
+        "whitenoise": {
+            "hashes": [
+                "sha256:d234b871b52271ae7ed6d9da47ffe857c76568f11dd30e28e18c5869dbd11e12",
+                "sha256:d963ef25639d1417e8a247be36e6aedd8c7c6f0a08adcb5a89146980a96b577c"
+            ],
+            "index": "pypi",
+            "version": "==5.3.0"
         }
     },
     "develop": {}
